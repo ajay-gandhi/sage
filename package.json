@@ -1,0 +1,29 @@
+{
+  "name": "sage",
+  "version": "1.0.0",
+  "description": "A voice personal assistant built on Node.js",
+  "main": "app.js",
+  "dependencies": {
+    "node-google-text-to-speech": "^0.1.0",
+    "speakable": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/ajay-gandhi/sage.git"
+  },
+  "keywords": [
+    "voice",
+    "personal",
+    "assistant"
+  ],
+  "author": "Ajay Gandhi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajay-gandhi/sage/issues"
+  },
+  "homepage": "https://github.com/ajay-gandhi/sage"
+}
