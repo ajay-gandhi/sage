@@ -9,7 +9,8 @@
 var program   = require('commander'),
     Speakable = require('speakable'),
     GoogleTTS = require('google-tts'),
-    fs        = require('fs-extra');
+    fs        = require('fs-extra'),
+    chalk     = require('chalk');
 
 // Local modules
 var config = require('./config');
@@ -28,6 +29,15 @@ if (program.configure) {
   // Add a specific config property
 
 } else {
+  // Print ASCII art
+  console.log(chalk.yellow('\n' +
+    '               Sage                         \n' +
+    '   __                                       \n' +
+    '  (  _ _ _     A talking personal assistant \n' +
+    ' __)(/(/(-                                  \n' +
+    '     _/        Written by Ajay Gandhi       \n' +
+    '                                            \n'));
+
   // Check if config exists, then start the app
   if (!config.exists()) {
     console.log('Error: You must configure Sage before you can run it.\n' +
@@ -80,6 +90,6 @@ if (program.configure) {
   });
 
   // Start listening
-  console.log('Listening');
+  console.log(chalk.green('Listening...'));
   stt.recordVoice();
 }
