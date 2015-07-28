@@ -82,9 +82,8 @@ The method is given two parameters.
              is just an instance of the `GoogleTTS` object; see
              [the google-tts module](https://github.com/ajay-gandhi/google-tts)
              for documentation.
-* `config`:  A copy of the configuration object. This contains the user's
-             preferences. Additionally, you can store your own properties in
-             this config (permanently) by running `./app.js --add-config`.
+* `config`:  An instance of the config object. Use `config.get(propertyname)` to
+             get the value of a property.
 
 Using these three parameters, you can write code that, for example, contacts a
 weather API and reads today's forecast.

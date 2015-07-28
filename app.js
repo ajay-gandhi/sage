@@ -19,7 +19,7 @@ program
   .version(require('./package.json').version)
   .option('-c, --configure',  'configure Sage')
   .option('-a, --add-config', 'add a specific config property')
-  .option('-r, --run',        'run Sage (also no flags)')
+  .option('-r, --run',        'run Sage (alias: no flags)')
   .parse(process.argv);
 
 if (program.configure) {
@@ -32,6 +32,7 @@ if (program.configure) {
 
 } else {
   // Print ASCII art
+  process.stdout.write('\u001B[2J\u001B[0;0f');
   console.log(chalk.yellow('\n' +
     '               Sage                         \n' +
     '   __                                       \n' +
@@ -69,7 +70,6 @@ if (program.configure) {
     });
   });
 
-  // Hotword
   var hotword = config.get('hotword');
 
   // Everything is now ready
@@ -80,14 +80,19 @@ if (program.configure) {
     console.log('Text:', recognized_words);
     if (recognized_text.indexOf(hotword) >= 0) {
 
-      console.log('Searching modules');
+      console.log('Searching modules...');
 
-      modules.forEach(function (module) {
+      for (var i = 0; i < modules.length; i++) {
+        var module = modules[i];
+
         if (module.match(recognized_text)) {
-          module.handle(recognized_text, GoogleTTS, config.get_all());
-          return;
+
+          console.log('Chose', /(\w+)\(/.exec(module.constructor.toString())[1]);
+
+          module.handle(recognized_text, GoogleTTS, config);
+          break;
         }
-      });
+      }
     }
 
     console.log();
@@ -95,6 +100,6 @@ if (program.configure) {
   });
 
   // Start listening
-  console.log(chalk.green('Listening...'));
+  console.log(chalk.green('Listening!\n'));
   stt.recordVoice();
 }

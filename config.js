@@ -98,7 +98,7 @@ module.exports.configure = function () {
   var questions = [
     {
       name:    'hotword',
-      message: 'What should Sage listen for to activate (hotword)?',
+      message: 'Activation word (hotword):',
       default: 'sage',
       validate: function (input) {
         // Alpha only, empty is okay (default exists)
@@ -113,15 +113,24 @@ module.exports.configure = function () {
     },
     {
       name:    'name',
-      message: 'What should I call you?',
+      message: 'Name:',
       validate: function (input) {
         if (input.length == 0) return 'Cannot be empty';
         else                   return true;
       }
     },
     {
+      name:    'weather',
+      message: 'Zipcode:',
+      validate: function (input) {
+        if (input.length == 0)             return 'Cannot be empty';
+        else if (!input.match(/^[0-9]+$/)) return 'Numbers only'
+        else                               return true;
+      }
+    },
+    {
       name:    'google_api_key',
-      message: 'Enter your Google Speech API key:',
+      message: 'Google Speech API key:',
       validate: function (input) {
         if (input.length == 0) return 'Cannot be empty';
         else                   return true;

@@ -49,10 +49,3 @@ The `speakable` module uses [SoX](http://sox.sourceforge.net) to record audio
 All the dependencies for Sage are now installed. See [Usage](#usage) to
 configure and run Sage.
 
-### A note about STT and TTS
-
-Note that Sage uses Google's APIs for converting speech to text and vice versa.
-This implies that anything you say ~~can and will be used against you in a
-court of law~~ may be monitored by Google. If this makes you uncomfortable,
-don't use Sage, or wait until offline engines are included with Sage.
-
