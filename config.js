@@ -14,7 +14,7 @@ var path = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME']
     + '/.sage.json';
 
 /**
- * Returns true if config file is populated
+ * Returns true if config file exists and is populated
  */
 module.exports.exists = function () {
   if (!config) {
@@ -37,35 +37,14 @@ module.exports.exists = function () {
  * Gets the config value for the given property
  */
 module.exports.get = function (property) {
-  if (!config) {
-    fs.readJson(path, function (err, obj) {
-      if (err) return console.log('Error reading config:', err);
-
-      config = obj;
-      console.log(config);
-      return config[property];
-    });
-
-  } else {
-    return config[property];
-  }
+  return config[property];
 }
 
 /**
  * Returns a JSON object of all config properties and values
  */
 module.exports.get_all = function () {
-  if (!config) {
-    fs.readJson(path, function (err, obj) {
-      if (err) return console.log('Error reading config:', err);
-
-      config = obj;
-      return config;
-    });
-
-  } else {
-    return config;
-  }
+  return config;
 }
 
 /**
@@ -76,23 +55,36 @@ module.exports.configure = function () {
   // Array of questions to inquire
   var questions = [
     {
+      name:    'hotword',
+      message: 'What should Sage listen for to activate (hotword)?',
+      default: 'sage',
+      validate: function (input) {
+        // Alpha only, empty is okay (default exists)
+        if (!input.match(/^[a-zA-Z]+$/) && input.length != 0)
+          return 'Letters only';
+        else
+          return true;
+      }
+    },
+    {
       name:    'name',
       message: 'What should I call you?',
       validate: function (input) {
-        return input.length != 0;
+        if (input.length == 0) return 'Cannot be empty';
+        else                   return true;
       }
     },
     {
       name:    'google_api_key',
       message: 'Enter your Google Speech API key:',
       validate: function (input) {
-        return input.length != 0;
+        if (input.length == 0) return 'Cannot be empty';
+        else                   return true;
       }
     }
   ];
 
   inquirer.prompt(questions, function (answers) {
-
     // Validation occurs during prompt, so we can write the resulting JSON now
     fs.writeJson(path, answers, function (err) {
       if (err) return console.log('Error writing config:', err);

@@ -67,13 +67,16 @@ if (program.configure) {
     });
   });
 
+  // Hotword
+  var hotword = config.get('hotword');
+
   // Everything is now ready
   stt.on('speechResult', function(recognized_words) {
     var recognized_text = recognized_words.join(' ');
 
     // Received result from Google, look for sage keyword
     console.log('Text:', recognized_words);
-    if (recognized_words.indexOf('Sage') >= 0) {
+    if (recognized_text.indexOf(hotword) >= 0) {
 
       console.log('Searching modules');
 
