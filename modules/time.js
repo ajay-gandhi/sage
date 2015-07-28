@@ -8,7 +8,7 @@ module.exports = (function () {
     this.priority = 0;
   }
 
-  TimeModule.prototype.handle = function (text, speaker, config) {
+  TimeModule.prototype.handle = function (input, speaker, config) {
     // Create string of time
     var currentdate = new Date();
     var hour = currentdate.getHours();
@@ -33,8 +33,8 @@ module.exports = (function () {
     speaker.play('The time is ' + hour + ', ' + minute + ', ' + ampm);
   }
 
-  TimeModule.prototype.match = function (text) {
-    return true;
+  TimeModule.prototype.match = function (input) {
+    return input.indexOf('time') >= 0;
   }
 
   return TimeModule;
