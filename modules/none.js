@@ -9,14 +9,14 @@ module.exports = (function () {
   }
 
   NoneModule.prototype.handle = function (input, speaker, config) {
-    messages = [
+    msg = [
       'Pardon?',
       "I didn't get that.",
       'Sorry?'
     ];
 
     // Say random message
-    speaker.play(messages[Math.floor(Math.random() * messages.length)]);
+    speaker.play(msg[Math.floor(Math.random() * msg.length)], complete);
   }
 
   NoneModule.prototype.match = function (input) {
