@@ -6,7 +6,8 @@ A talking personal assistant build on Node.js
 
 Put simply, Sage is the desktop equivalent of Apple's Siri or Google Now. While
 running, Sage continuously listens for you to say its hotword (default "Sage").
-Then, based on a number of modules, Sage will in
+Then, based on a number of modules, Sage will conduct some actions and tell you
+the result.
 
 ## Table of Contents
 
