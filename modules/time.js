@@ -8,7 +8,7 @@ module.exports = (function () {
     this.priority = 0;
   }
 
-  TimeModule.prototype.handle = function (input, speaker, config) {
+  TimeModule.prototype.handle = function (input, speaker, config, complete) {
     var now = new Date();
 
     if (/time/.test(input)) {
@@ -32,7 +32,7 @@ module.exports = (function () {
         minute = 'o ' + minute;
       }
 
-      speaker.play('The time is ' + hour + '. ' + minute + '. ' + ampm);
+      speaker.play('The time is ' + hour + '. ' + minute + '. ' + ampm, complete);
 
     } else {
       // Tell the date
@@ -51,7 +51,7 @@ module.exports = (function () {
       var day = days[now.getDay()],
           month = months[now.getMonth()];
 
-      speaker.play('Today is ' + day + ', ' + month + ' ' + today + ', ' + year);
+      speaker.play('Today is ' + day + ', ' + month + ' ' + today + ', ' + year, complete);
 
     }
   }

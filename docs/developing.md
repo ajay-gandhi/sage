@@ -70,20 +70,26 @@ Add another prototype method to the object called `handle`. This method will
 execute the specified code once the module has been chosen by Sage.
 
 ```js
-  ModuleName.prototype.handle = function (input, speaker, config) {
+  ModuleName.prototype.handle = function (input, speaker, config, complete) {
 
   }
 ```
 
-The method is given two parameters.
+The method is given four parameters.
 
-* `input`:   The spoken audio converted to text
-* `speaker`: A link to the TTS system so that you can say any information. This
-             is just an instance of the `GoogleTTS` object; see
-             [the google-tts module](https://github.com/ajay-gandhi/google-tts)
-             for documentation.
-* `config`:  An instance of the config object. Use `config.get(propertyname)` to
-             get the value of a property.
+* `input`:    The spoken audio converted to text
+* `speaker`:  A link to the TTS system so that you can say any information. This
+              is just an instance of the `GoogleTTS` object; see
+              [the google-tts module](https://github.com/ajay-gandhi/google-tts)
+              for documentation.
+* `config`:   An instance of the config object. Use `config.get(propertyname)` to
+              get the value of a property.
+* `complete`: A callback function. You must call this function after your code
+              has finished running. Having this callback function ensures that
+              Sage doesn't activate itself while telling you some information.
+              Note that
+              [the tts module](https://github.com/ajay-gandhi/google-tts) has
+              a callback parameter for all its functions.
 
 Using these three parameters, you can write code that, for example, contacts a
 weather API and reads today's forecast.

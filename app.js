@@ -89,14 +89,14 @@ if (program.configure) {
 
           console.log('Chose', /(\w+)\(/.exec(module.constructor.toString())[1]);
 
-          module.handle(recognized_text, GoogleTTS, config);
+          module.handle(recognized_text, GoogleTTS, config, function () {
+            console.log();
+            stt.recordVoice();
+          });
           break;
         }
       }
     }
-
-    console.log();
-    stt.recordVoice();
   });
 
   // Start listening

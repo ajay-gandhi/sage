@@ -10,7 +10,7 @@ module.exports = (function () {
     this.priority = 1;
   }
 
-  WeatherModule.prototype.handle = function (input, speaker, config) {
+  WeatherModule.prototype.handle = function (input, speaker, config, complete) {
     var zipcode = config.get('weather');
 
     weather.find({ search: zipcode, degreeType: 'F' }, function(err, result) {
@@ -31,7 +31,8 @@ module.exports = (function () {
       var conditions   = forecast.skytextday;
 
       speaker.play('It is currently ' + current_temp + '. Today will be ' +
-        conditions + ' with a high of ' + high + ' and a low of ' + low);
+        conditions + ' with a high of ' + high + ' and a low of ' + low,
+        complete);
     });
   }
 
