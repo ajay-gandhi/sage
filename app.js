@@ -80,8 +80,7 @@ if (program.configure) {
     console.log('Text:', recognized_words);
     if (recognized_text.indexOf(hotword) >= 0) {
 
-      console.log('Searching modules...');
-
+      // Search modules
       for (var i = 0; i < modules.length; i++) {
         var module = modules[i];
 

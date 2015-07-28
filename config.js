@@ -135,6 +135,55 @@ module.exports.configure = function () {
         if (input.length == 0) return 'Cannot be empty';
         else                   return true;
       }
+    },
+    // Email questions
+    {
+      type:    'confirm',
+      name:    'email_has',
+      message: 'Do you want to enter your email credentials?'
+    },
+    {
+      name:     'email_address',
+      message:  'Email address:',
+      validate: function (input) {
+        return /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(input);
+      },
+      when:     function (answers) {
+        return answers.email_has;
+      }
+    },
+    {
+      type:     'password',
+      name:     'email_password',
+      message:  'Email password',
+      validate: function (input) {
+        return input.length != 0;
+      },
+      when:     function (answers) {
+        return answers.email_has;
+      }
+    },
+    {
+      name:     'email_host',
+      message:  'IMAP host:',
+      default:  'imap.gmail.com',
+      validate: function (input) {
+        return input.length != 0;
+      },
+      when:     function (answers) {
+        return answers.email_has;
+      }
+    },
+    {
+      name:     'email_port',
+      message:  'IMAP port:',
+      default:  '993',
+      validate: function (input) {
+        return input.length != 0;
+      },
+      when:     function (answers) {
+        return answers.email_has;
+      }
     }
   ];
 
