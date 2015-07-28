@@ -48,6 +48,48 @@ module.exports.get_all = function () {
 }
 
 /**
+ * Prompts the user and adds a specific config property
+ */
+module.exports.add = function () {
+  var questions = [
+    {
+      name:     'prop',
+      message:  'What is the name of the property you want to add?',
+      validate: function (input) {
+        // Alphanumeric and _ only
+        if (!input.match(/^[a-zA-Z0-9_]+$/) && input.length != 0)
+          return 'Can only contain letters, numbers, and underscore (_)';
+        else
+          return true;
+      }
+    },
+    {
+      name:    'value',
+      message: 'Value:' 
+    }
+  ];
+
+  inquirer.prompt(questions, function (answers) {
+    // Validation occurs during prompt, so we can write the resulting JSON now
+    // Read
+    fs.readJson(path, function (err, obj) {
+      if (err) return console.log('Error reading config:', err);
+
+      // Add
+      obj[answers.prop] = answers.value;
+
+      // Write
+      fs.writeJson(path, obj, function (err) {
+        if (err) return console.log('Error writing config:', err);
+
+        config = obj;
+        console.log('Success! The property has been added.');
+      });
+    });
+  });
+}
+
+/**
  * Prompts the user to set all configuration properties. Should be called before
  * attempting to actually run Sage.
  */
@@ -88,6 +130,7 @@ module.exports.configure = function () {
   ];
 
   inquirer.prompt(questions, function (answers) {
+
     // Validation occurs during prompt, so we can write the resulting JSON now
     fs.writeJson(path, answers, function (err) {
       if (err) return console.log('Error writing config:', err);
@@ -95,6 +138,5 @@ module.exports.configure = function () {
       config = answers;
       console.log('Success! You are ready to use Sage.');
     });
-
   });
 }

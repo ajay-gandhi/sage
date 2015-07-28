@@ -70,7 +70,7 @@ Add another prototype method to the object called `handle`. This method will
 execute the specified code once the module has been chosen by Sage.
 
 ```js
-  ModuleName.prototype.handle = function (input, speaker) {
+  ModuleName.prototype.handle = function (input, speaker, config) {
 
   }
 ```
@@ -82,8 +82,11 @@ The method is given two parameters.
              is just an instance of the `GoogleTTS` object; see
              [the google-tts module](https://github.com/ajay-gandhi/google-tts)
              for documentation.
+* `config`:  A copy of the configuration object. This contains the user's
+             preferences. Additionally, you can store your own properties in
+             this config (permanently) by running `./app.js --add-config`.
 
-Using these two parameters, you can write code that, for example, contacts a
+Using these three parameters, you can write code that, for example, contacts a
 weather API and reads today's forecast.
 
 ## Finishing Up

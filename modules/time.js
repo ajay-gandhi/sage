@@ -8,7 +8,7 @@ module.exports = (function () {
     this.priority = 0;
   }
 
-  TimeModule.prototype.handle = function (text, speaker) {
+  TimeModule.prototype.handle = function (text, speaker, config) {
     // Create string of time
     var currentdate = new Date();
     var hour = currentdate.getHours();

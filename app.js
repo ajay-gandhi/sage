@@ -17,8 +17,9 @@ var config = require('./config');
 
 program
   .version(require('./package.json').version)
-  .option('-c, --configure', 'Configure Sage')
-  .option('-C, --add-config', 'Add a specific config property')
+  .option('-c, --configure',  'configure Sage')
+  .option('-a, --add-config', 'add a specific config property')
+  .option('-r, --run',        'run Sage (also no flags)')
   .parse(process.argv);
 
 if (program.configure) {
@@ -27,6 +28,7 @@ if (program.configure) {
 
 } else if (program.addConfig) {
   // Add a specific config property
+  config.add();
 
 } else {
   // Print ASCII art
@@ -82,7 +84,7 @@ if (program.configure) {
 
       modules.forEach(function (module) {
         if (module.match(recognized_text)) {
-          module.handle(recognized_text, GoogleTTS);
+          module.handle(recognized_text, GoogleTTS, config.get_all());
           return;
         }
       });
