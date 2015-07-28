@@ -9,6 +9,7 @@ to develop your own, see the [Developing](developing.md).
 Each of these questions must be asked with your hotword.
 
 * [Email](#email)
+* [Jokes](#jokes)
 * [Time](#time)
 * [Weather](#weather)
 * ~~News~~ _(coming)_
@@ -20,6 +21,13 @@ Informs you of up to 3 unread emails (sender and subject).
 
 * Do I have any new mail?
 * Read me my email.
+
+### Jokes
+
+Tells a joke using your name.
+
+* Tell me a joke.
+* Make me laugh.
 
 ### Time
 
