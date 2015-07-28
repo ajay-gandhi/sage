@@ -64,6 +64,9 @@ module.exports.configure = function () {
           return 'Letters only';
         else
           return true;
+      },
+      filter:   function (input) {
+        return input.toLowerCase();
       }
     },
     {
