@@ -4,12 +4,11 @@
 
 module.exports = (function () {
 
-  function Module () {
+  function TimeModule () {
     this.priority = 0;
-    this.keywords = ['time'];
   }
 
-  Module.prototype.handle = function (text, speaker) {
+  TimeModule.prototype.handle = function (text, speaker) {
     // Create string of time
     var currentdate = new Date();
     var hour = currentdate.getHours();
@@ -34,10 +33,10 @@ module.exports = (function () {
     speaker.play('The time is ' + hour + ', ' + minute + ', ' + ampm);
   }
 
-  Module.prototype.match = function (text) {
+  TimeModule.prototype.match = function (text) {
     return true;
   }
 
-  return Module;
+  return TimeModule;
 
 })();
