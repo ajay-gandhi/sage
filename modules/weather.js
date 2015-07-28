@@ -7,7 +7,7 @@ var weather = require('weather-js');
 module.exports = (function () {
 
   function WeatherModule () {
-    this.priority = 0;
+    this.priority = 1;
   }
 
   WeatherModule.prototype.handle = function (input, speaker, config) {
