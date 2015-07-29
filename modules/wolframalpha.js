@@ -56,11 +56,11 @@ module.exports = (function () {
           content += defns[i].replace(/^(.*)\|(.*)\|/, '') + '.';
         }
 
-        speaker.play(content);
+        speaker.play(content, complete);
 
       } else {
         // Not a defn, so speak result
-        speaker.play(content);
+        speaker.play(content, complete);
       }
     });
 
