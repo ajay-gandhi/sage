@@ -3,6 +3,8 @@
 Sage runs on [Node.js](http://nodejs.org), so you must have that installed,
 along with [npm](http://npmjs.org).
 
+__Note:__ These instructions are relevant as of July 28, 2015.
+
 ## Google APIs
 
 Sage uses Google APIs for all speech-to-text and text-to-speech conversion.
@@ -46,6 +48,23 @@ The `speakable` module uses [SoX](http://sox.sourceforge.net) to record audio
     $ brew install sox         # mac
 ```
 
-All the dependencies for Sage are now installed. See [Usage](#usage) to
-configure and run Sage.
+All the required dependencies for Sage are now installed. Keep reading to
+add optional APIs (e.g. news), or see [Usage](usage.md) to configure and run
+Sage.
 
+## Optional APIs
+
+These APIs really increase the usability of Sage, since they add features such
+as news and [WolframAlpha](http://wolframalpha.com).
+
+### WolframAlpha
+
+Sign up for a WolframAlpha API key to take advantage of WolframAlpha's powerful
+knowledge engine. See (Modules)[#modules.md] for usage.
+
+1. Go to (WolframAlpha's developer page)[http://www.wolframalpha.com/widgets/].
+2. Sign in or create an account.
+3. Go to "My Apps" at the top of the page, and choose "Get an AppID".
+4. Choose any name and description for you application, then continue.
+
+Keep your API key handy for configuration.

@@ -34,7 +34,7 @@ module.exports = (function () {
 
     }).on('error', function (err) {
       console.log('Error retrieveing joke:', err);
-    })
+    });
   }
 
   JokeModule.prototype.match = function (input) {
