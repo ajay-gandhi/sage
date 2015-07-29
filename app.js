@@ -74,8 +74,7 @@ if (program.configure) {
 
   // Everything is now ready
   stt.on('speechResult', function(recognized_words) {
-    // var recognized_text = recognized_words.join(' ').toLowerCase();
-    var recognized_text = 'hey sage what is a donkey';
+    var recognized_text = recognized_words.join(' ').toLowerCase();
 
     // Received result from Google, look for sage keyword
     console.log('Text:', recognized_words);
