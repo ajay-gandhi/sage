@@ -14,8 +14,8 @@ module.exports = (function () {
     var exclude = ['explicit'];
 
     var api_path = 'http://api.icndb.com/jokes/random?exclude=[' +
-                  exclude.join(',') + ']&firstName=' + config.get('name') +
-                  '&lastName=';
+                   exclude.join(',') + ']&firstName=' + config.get('name') +
+                   '&lastName=';
 
     // Get joke
     http.get(api_path, function (res) {
@@ -27,6 +27,7 @@ module.exports = (function () {
         result += chunk;
       });
 
+      // Speak when data ends
       res.on('end', function () {
         speaker.play(JSON.parse(result).value.joke, complete);
       });
