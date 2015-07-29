@@ -5,10 +5,10 @@
 module.exports = (function () {
 
   function NoneModule () {
-    this.priority = Number.MIN_VALUE;
+    this.priority = Number.NEGATIVE_INFINITY;
   }
 
-  NoneModule.prototype.handle = function (input, speaker, config) {
+  NoneModule.prototype.handle = function (input, speaker, config, complete) {
     msg = [
       'Pardon?',
       "I didn't get that.",

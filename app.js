@@ -66,7 +66,7 @@ if (program.configure) {
 
     // Sort modules by decreasing priority
     modules.sort(function (a, b) {
-      return a.priority - b.priority;
+      return b.priority - a.priority;
     });
   });
 
