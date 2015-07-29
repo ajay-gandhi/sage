@@ -1,6 +1,6 @@
 {
   "name": "sage",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A voice personal assistant built on Node.js",
   "main": "app.js",
   "dependencies": {
@@ -13,7 +13,8 @@
     "lame": "^1.2.2",
     "speakable": "git://github.com/ajay-gandhi/node-speakable",
     "speaker": "^0.2.5",
-    "weather-js": "^1.0.2"
+    "weather-js": "^1.0.2",
+    "wolfram-alpha": "^0.2.1"
   },
   "devDependencies": {},
   "scripts": {

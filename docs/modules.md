@@ -13,7 +13,7 @@ Each of these questions must be asked with your hotword.
 * [Time](#time)
 * [Weather](#weather)
 * ~~News~~ _(coming)_
-* ~~WolframAlpha~~ _(coming)_
+* [WolframAlpha](#wolframalpha)
 
 ### Email
 
@@ -44,4 +44,13 @@ Today's weather forecast.
 * How's the weather?
 * Do I need a jacket?
 * Will it rain?
+
+### WolframAlpha
+
+Perhaps the most powerful module, the WolframAlpha module enables you to ask
+almost any question. Some examples:
+
+* Define meticulous.
+* How tall is Michael Jordan?
+* What is the population of Europe?
 

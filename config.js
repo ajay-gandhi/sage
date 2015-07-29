@@ -129,6 +129,10 @@ module.exports.configure = function () {
       }
     },
     {
+      name:    'wolfram_api_key',
+      message: 'WolframAlpha API key:'
+    },
+    {
       name:    'google_api_key',
       message: 'Google Speech API key:',
       validate: function (input) {

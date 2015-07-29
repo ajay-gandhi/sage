@@ -1,5 +1,5 @@
 /**
- * Module for telling the time
+ * Module for telling jokes
  */
 
 var http = require('http');
