@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Main module. Evaluates command line arguments and starts the actual program
+ * Main module. Evaluates command line arguments, detects modules, etc
  */
 
 // NPM modules
@@ -81,7 +81,7 @@ if (program.configure) {
 
       } else {
         // Start listening again
-        console.log('(No action)');
+        console.log(chalk.dim('(No action)'));
         query();
       }
     });
