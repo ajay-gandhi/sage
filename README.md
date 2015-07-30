@@ -9,6 +9,10 @@ running, Sage continuously listens for you to say its hotword (default "Sage").
 Then, based on a number of modules, Sage will conduct some actions and tell you
 the result.
 
+Sage is only supported for Linux and Mac, but it should run on Windows with a
+few tweaks. If you happen to get it up and running, submit a pull request and
+we'll add your instructions here!
+
 ## Table of Contents
 
 - [Usage](docs/usage.md)

@@ -81,8 +81,8 @@ The method is given four parameters.
 * `speaker`:  A link to the TTS system so that you can speak your results. See
               [tts.js](../tts.js) for documentation, and any
               [module](../modules/) for an example.
-* `config`:   An instance of the config object. Use `config.get(propertyname)` to
-              get the value of a property.
+* `config`:   An instance of the config object. Use `config.get(propertyname)`
+              to get the value of a property.
 * `complete`: The module callback function. Sage stops listening to what you say
               once it recognizes its hotword. You must call this function after
               your code has finished running so that Sage starts listening
@@ -97,3 +97,6 @@ weather API and reads today's forecast.
 
 Once you've followed the above steps, just drop the file into the `modules`
 directory and restart Sage. The module will be automatically included.
+
+If you think you've made a great module and would like to include it here, add
+it to your `modules` directory and submit a pull request!

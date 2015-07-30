@@ -1,12 +1,12 @@
 # Modules
 
-Sage operates on a set of "modules", bits of code that enable you to ask new
+Sage operates on a set of "modules" - bits of code that enable you to ask new
 questions. New modules can simply be dropped into the `modules` folder.
 
-Here is an introductory list of the modules that come with Sage. If you'd like
-to develop your own, see the [Developing](developing.md).
+Here is a list of the modules that come with Sage. If you'd like to develop your
+own, see the [Developing docs](developing.md).
 
-Each of these questions must be asked with your hotword.
+Each of these questions must be asked along with your hotword.
 
 * [Email](#email)
 * [Jokes](#jokes)
