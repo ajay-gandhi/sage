@@ -78,18 +78,17 @@ execute the specified code once the module has been chosen by Sage.
 The method is given four parameters.
 
 * `input`:    The spoken audio converted to text
-* `speaker`:  A link to the TTS system so that you can say any information. This
-              is just an instance of the `GoogleTTS` object; see
-              [the google-tts module](https://github.com/ajay-gandhi/google-tts)
-              for documentation.
+* `speaker`:  A link to the TTS system so that you can speak your results. See
+              [tts.js](../tts.js) for documentation, and any
+              [module](../modules/) for an example.
 * `config`:   An instance of the config object. Use `config.get(propertyname)` to
               get the value of a property.
-* `complete`: A callback function. You must call this function after your code
-              has finished running. Having this callback function ensures that
-              Sage doesn't activate itself while telling you some information.
-              Note that
-              [the tts module](https://github.com/ajay-gandhi/google-tts) has
-              a callback parameter for all its functions.
+* `complete`: The module callback function. Sage stops listening to what you say
+              once it recognizes its hotword. You must call this function after
+              your code has finished running so that Sage starts listening
+              again. Having this callback function ensures that Sage doesn't
+              activate itself while telling you some information. Note that the
+              tts module has a callback parameter for its `say` function.
 
 Using these three parameters, you can write code that, for example, contacts a
 weather API and reads today's forecast.

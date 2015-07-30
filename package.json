@@ -1,18 +1,15 @@
 {
   "name": "sage",
-  "version": "0.1.6",
+  "version": "0.2.6",
   "description": "A voice personal assistant built on Node.js",
   "main": "app.js",
   "dependencies": {
     "chalk": "^1.1.0",
     "commander": "^2.8.1",
     "fs-extra": "^0.22.1",
-    "google-tts": "^1.1.2",
     "imap-simple": "^1.5.0",
     "inquirer": "^0.9.0",
-    "lame": "^1.2.2",
     "speakable": "git://github.com/ajay-gandhi/node-speakable",
-    "speaker": "^0.2.5",
     "weather-js": "^1.0.2",
     "wolfram-alpha": "^0.2.1"
   },

@@ -29,7 +29,7 @@ module.exports = (function () {
 
       // Speak when data ends
       res.on('end', function () {
-        speaker.play(JSON.parse(result).value.joke, complete);
+        speaker.say(JSON.parse(result).value.joke, complete);
       });
 
     }).on('error', function (err) {

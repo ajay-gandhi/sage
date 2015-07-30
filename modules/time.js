@@ -32,7 +32,7 @@ module.exports = (function () {
         minute = 'o ' + minute;
       }
 
-      speaker.play('The time is ' + hour + '. ' + minute + '. ' + ampm, complete);
+      speaker.say('The time is ' + hour + '. ' + minute + '. ' + ampm, complete);
 
     } else {
       // Tell the date
@@ -51,7 +51,7 @@ module.exports = (function () {
       var day = days[now.getDay()],
           month = months[now.getMonth()];
 
-      speaker.play('Today is ' + day + ', ' + month + ' ' + today + ', ' + year, complete);
+      speaker.say('Today is ' + day + ', ' + month + ' ' + today + ', ' + year, complete);
 
     }
   }

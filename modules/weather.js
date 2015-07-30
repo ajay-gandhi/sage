@@ -30,7 +30,7 @@ module.exports = (function () {
       var low          = forecast.low;
       var conditions   = forecast.skytextday;
 
-      speaker.play('It is currently ' + current_temp + '. Today will be ' +
+      speaker.say('It is currently ' + current_temp + '. Today will be ' +
         conditions + ' with a high of ' + high + ' and a low of ' + low,
         complete);
     });

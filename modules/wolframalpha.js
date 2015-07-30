@@ -21,7 +21,7 @@ module.exports = (function () {
 
     if (api_key.length == 0) {
       console.log('No WolframAlpha API key.');
-      speaker.play('No WolframAlpha API key.');
+      speaker.say('No WolframAlpha API key.');
       return
     }
 
@@ -56,11 +56,11 @@ module.exports = (function () {
           content += defns[i].replace(/^(.*)\|(.*)\|/, '') + '.';
         }
 
-        speaker.play(content, complete);
+        speaker.say(content, complete);
 
       } else {
         // Not a defn, so speak result
-        speaker.play(content, complete);
+        speaker.say(content, complete);
       }
     });
 

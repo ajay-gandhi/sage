@@ -16,7 +16,7 @@ module.exports = (function () {
     ];
 
     // Say random message
-    speaker.play(msg[Math.floor(Math.random() * msg.length)], complete);
+    speaker.say(msg[Math.floor(Math.random() * msg.length)], complete);
   }
 
   NoneModule.prototype.match = function (input) {

@@ -7,11 +7,9 @@ __Note:__ These instructions are relevant as of July 28, 2015.
 
 ## Google APIs
 
-Sage uses Google APIs for all speech-to-text and text-to-speech conversion.
-The former requires an API key, but the latter does not.
+Sage uses Google APIs for speech-to-text conversion. This requires an API key.
 
-To obtain an API key for the Google Speech API (speech-to-text), follow these
-steps:
+To obtain an API key for the Google Speech API, follow these steps:
 
 1. Join the [Chromium Dev Group](https://groups.google.com/a/chromium.org/forum/#!forum/chromium-dev)
    on Google Groups. This unhides the Speech API in the developer console.
@@ -30,22 +28,29 @@ Keep your API key handy for configuration.
 Clone this Git repo and navigate to it:
 
 ```bash
-    $ git clone https://github.com/ajay-gandhi/sage.git
-    $ cd sage/
+$ git clone https://github.com/ajay-gandhi/sage.git
+$ cd sage/
 ```
 
 Install any Node.js dependencies using `npm`:
 
 ```bash
-    $ npm install
+$ npm install
 ```
 
 The `speakable` module uses [SoX](http://sox.sourceforge.net) to record audio
 (for speech to text conversion), so install `sox`:
 
 ```bash
-    $ sudo apt-get install sox # linux
-    $ brew install sox         # mac
+$ sudo apt-get install sox # linux
+$ brew install sox         # mac
+```
+
+The text-to-speech module uses the `espeak` executable, so install that as well:
+
+```bash
+$ sudo apt-get install espeak # linux
+$ brew install espeak         # mac
 ```
 
 All the required dependencies for Sage are now installed. Keep reading to

@@ -8,12 +8,12 @@
 // NPM modules
 var program   = require('commander'),
     Speakable = require('speakable'),
-    GoogleTTS = require('google-tts'),
     fs        = require('fs-extra'),
     chalk     = require('chalk');
 
 // Local modules
-var config = require('./config');
+var config = require('./config'),
+    tts    = require('./tts');
 
 program
   .version(require('./package.json').version)
@@ -89,7 +89,7 @@ if (program.configure) {
           console.log('Chose', /(\w+)\(/.exec(module.constructor.toString())[1]);
 
           // Handle the input with this module
-          module.handle(recognized_text, GoogleTTS, config, function () {
+          module.handle(recognized_text, tts, config, function () {
             console.log();
             stt.recordVoice();
           });

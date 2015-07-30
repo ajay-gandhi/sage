@@ -15,7 +15,7 @@ module.exports = (function () {
     // Check if email is set up
     if (!config.get('email_has')) {
       console.log('Email not set up.');
-      speaker.play('Email not set up.');
+      speaker.say('Email not set up.');
       return;
     }
 
@@ -71,7 +71,7 @@ module.exports = (function () {
                      part.body.from[0].replace(/( )\<[^>]*\>/, '') + '. ';
         }
 
-        speaker.play(content, complete);
+        speaker.say(content, complete);
 
       });
 
