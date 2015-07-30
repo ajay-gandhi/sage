@@ -22,6 +22,9 @@ After configuring, just run `app.js`:
     $ ./app.js
 ```
 
+If you'd like to see all the options, use the `-h` or `--help` flag. If you'd
+like to run Sage with text I/O, use the `-t` or `--text` flag.
+
 ## Interaction
 
 Sage is always listening for the hotword(s) that you chose during Configuration.
