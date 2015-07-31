@@ -2,6 +2,8 @@
 
 A talking personal assistant build on Node.js
 
+![Sage Time](img/sage.png)
+
 ## About
 
 Put simply, Sage is the desktop equivalent of Apple's Siri or Google Now. While
