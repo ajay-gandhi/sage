@@ -58,6 +58,10 @@ module.exports = (function () {
         if (count > 3) {
           count = 'more than 3';
           results = results.slice(0, 3);
+
+        } else if (count == 0) {
+          speaker.say('You have no new emails.', complete);
+          return;
         }
 
         var content = 'You have ' + count + ' unread ' +
