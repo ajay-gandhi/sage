@@ -1,3 +1,5 @@
+[Table of Contents](README.md)
+
 # Usage
 
 First ensure you've [installed all the dependencies](installation.md).
@@ -11,7 +13,7 @@ $ sage --configure
 ```
 
 Sage will ask you several questions such as what Sage should call you and your
-[Google Speech API key](installation.md#GoogleAPIs). The config data is stored in
+[Google Speech API key](installation.md#google-apis). The config data is stored in
 `~/.sage.json`.
 
 ## Running

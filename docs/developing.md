@@ -1,11 +1,13 @@
+[Table of Contents](README.md)
+
 # Developing
 
 Sage provides an intuitive interface for developing your own modules.
 
 * [Framework](#framework)
-* [Matching Input](#matchingInput)
+* [Matching Input](#matching-input)
 * [Priority](#priority)
-* [Handling Input](#handleInput)
+* [Handling Input](#handle-input)
 
 ## Framework
 
@@ -100,7 +102,7 @@ add it to the config file by running:
 
 ```bash
 $ sage --add-config
-$ sage -a           # Shortcode alias
+$ sage -a             # Shortcode alias
 ```
 
 Sage will then prompt you for the property name and value you want to add.

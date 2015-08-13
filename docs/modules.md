@@ -1,3 +1,5 @@
+[Table of Contents](README.md)
+
 # Modules
 
 Sage operates on a set of "modules" - bits of code that enable you to ask new

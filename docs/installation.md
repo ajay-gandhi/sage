@@ -1,3 +1,5 @@
+[Table of Contents](README.md)
+
 # Installation
 
 Sage runs on [Node.js](http://nodejs.org), so you must have that installed,
@@ -60,7 +62,7 @@ These APIs really increase the usability of Sage, since they add modules such as
 ### WolframAlpha
 
 Sign up for a WolframAlpha API key to take advantage of WolframAlpha's powerful
-knowledge engine. See [Modules](#modules.md) for usage.
+knowledge engine. See [Modules](modules.md) for usage.
 
 1. Go to [WolframAlpha's developer page](http://www.wolframalpha.com/widgets/).
 2. Sign in or create an account.
