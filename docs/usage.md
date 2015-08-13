@@ -7,7 +7,7 @@ First ensure you've [installed all the dependencies](installation.md).
 Before running Sage, you must run the configuration script:
 
 ```bash
-$ ./app.js --configure
+$ sage --configure
 ```
 
 Sage will ask you several questions such as what Sage should call you and your
@@ -16,10 +16,10 @@ Sage will ask you several questions such as what Sage should call you and your
 
 ## Running
 
-After configuring, just run `app.js`:
+After configuring, just run `sage`:
 
 ```bash
-    $ ./app.js
+$ sage
 ```
 
 If you'd like to see all the options, use the `-h` or `--help` flag. If you'd
@@ -34,8 +34,7 @@ You should ask your question after saying the hotword (in one sentence). Here
 are some examples using "sage" as the hotword:
 
 * Hey Sage, what time is it?
-* Ok Sage, tell me the weather.
+* Tell me the weather, Sage.
 
 See [Modules](modules.md) for information on what kinds of questions you can
 ask.
-

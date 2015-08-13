@@ -25,18 +25,13 @@ Keep your API key handy for configuration.
 
 ## Node.js Dependencies
 
-Clone this Git repo and navigate to it:
+Install this repo globally with NPM:
 
 ```bash
-$ git clone https://github.com/ajay-gandhi/sage.git
-$ cd sage/
+$ npm install -g ajay-gandhi/sage
 ```
 
-Install any Node.js dependencies using `npm`:
-
-```bash
-$ npm install
-```
+This will install this repo and its Node.js dependencies.
 
 The `speakable` module uses [SoX](http://sox.sourceforge.net) to record audio
 (for speech to text conversion), so install `sox`:
@@ -73,4 +68,3 @@ knowledge engine. See [Modules](#modules.md) for usage.
 4. Choose any name and description for you application, then continue.
 
 Keep your API key handy for configuration.
-

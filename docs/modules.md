@@ -53,4 +53,3 @@ almost any question. Some examples:
 * Define meticulous.
 * How tall is Michael Jordan?
 * What is the population of Europe?
-
