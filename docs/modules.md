@@ -12,9 +12,9 @@ Each of these questions must be asked along with your hotword.
 
 * [Email](#email)
 * [Jokes](#jokes)
+* [News](#news)
 * [Time](#time)
 * [Weather](#weather)
-* ~~News~~ _(coming)_
 * [WolframAlpha](#wolframalpha)
 
 ### Email
@@ -30,6 +30,14 @@ Tells a joke using your name.
 
 * Tell me a joke.
 * Make me laugh.
+
+### News
+
+Reads the top 3 headlines from CNN.
+
+* What are today's headlines?
+* Tell me the news.
+* Tell me some current events.
 
 ### Time
 
