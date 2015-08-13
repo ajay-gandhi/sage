@@ -93,6 +93,18 @@ The method is given four parameters.
 Using these three parameters, you can write code that, for example, contacts a
 weather API and reads today's forecast.
 
+## API Keys and Other Config
+
+If your module requires an API key, or some sort of persistent setting, you can
+add it to the config file by running:
+
+```bash
+$ sage --add-config
+$ sage -a           # Shortcode alias
+```
+
+Sage will then prompt you for the property name and value you want to add.
+
 ## Finishing Up
 
 Once you've followed the above steps, just drop the file into the `modules`
