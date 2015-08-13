@@ -59,17 +59,18 @@ Sage.
 
 ## Optional APIs
 
-These APIs really increase the usability of Sage, since they add features such
-as news and [WolframAlpha](http://wolframalpha.com).
+These APIs really increase the usability of Sage, since they add modules such as
+[WolframAlpha](http://wolframalpha.com).
 
 ### WolframAlpha
 
 Sign up for a WolframAlpha API key to take advantage of WolframAlpha's powerful
-knowledge engine. See (Modules)[#modules.md] for usage.
+knowledge engine. See [Modules](#modules.md) for usage.
 
-1. Go to (WolframAlpha's developer page)[http://www.wolframalpha.com/widgets/].
+1. Go to [WolframAlpha's developer page](http://www.wolframalpha.com/widgets/).
 2. Sign in or create an account.
 3. Go to "My Apps" at the top of the page, and choose "Get an AppID".
 4. Choose any name and description for you application, then continue.
 
 Keep your API key handy for configuration.
+
