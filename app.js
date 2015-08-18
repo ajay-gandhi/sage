@@ -42,7 +42,7 @@ if (program.configure) {
     console.log('Error: You must configure Sage before you can run it.\n' +
       'Do this by running app.js with the `--configure` flag:\n\n' +
       '    $ ./app.js --configure\n');
-    process.exit(0);
+    process.exit(1);
   }
 
   // Print ASCII art

@@ -30,7 +30,12 @@ module.exports.get_modules = function () {
   // Each file is a module
   // Add each to modules array
   filenames.forEach(function (filename) {
-    modules.push(new (require('./modules/' + filename))());
+    // Ignore modules if it errors
+    try {
+      modules.push(new (require('./modules/' + filename))());
+    } catch (e) {
+      console.log(chalk.red('Ignoring module: ' + filename + ' due to errors'));
+    }
   });
 
   // Sort modules by decreasing priority
