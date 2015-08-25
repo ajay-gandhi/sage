@@ -1,6 +1,6 @@
 {
   "name": "sage",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A voice personal assistant built on Node.js",
   "main": "app.js",
   "bin": {

@@ -22,12 +22,8 @@ module.exports = (function () {
     if (api_key.length == 0) {
       console.log('No WolframAlpha API key.');
       speaker.say('No WolframAlpha API key.');
-      return
+      return;
     }
-
-    // Remove hotword
-    var hw       = config.get('hotword');
-    var question = input.replace(new RegExp('^.*' + hw), '');
 
     var wolfram_api = Wolfram.createClient(api_key);
 

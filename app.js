@@ -62,6 +62,9 @@ if (program.configure) {
 
       var recognized_text = answers.input;
       if (recognized_text.indexOf(hotword) >= 0) {
+        // Remove everything before hotword
+        var repl_patt = new RegExp('^.*(' + hotword + ' )', 'i');
+        recognized_text = recognized_text.replace(repl_patt, '');
 
         // Search modules
         for (var i = 0; i < modules.length; i++) {
@@ -115,9 +118,12 @@ if (program.configure) {
   stt.on('speechResult', function(recognized_words) {
     var recognized_text = recognized_words.join(' ').toLowerCase();
 
-    // Received result from Google, look for sage keyword
+    // Received result from Google, look for hotword
     console.log('Text:', recognized_words);
     if (recognized_text.indexOf(hotword) >= 0) {
+      // Remove everything before hotword
+      var repl_patt = new RegExp('^.*(' + hotword + ' )', 'i');
+      recognized_text = recognized_text.replace(repl_patt, '');
 
       // Search modules
       for (var i = 0; i < modules.length; i++) {

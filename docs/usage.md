@@ -36,7 +36,7 @@ You should ask your question after saying the hotword (in one sentence). Here
 are some examples using "sage" as the hotword:
 
 * Hey Sage, what time is it?
-* Tell me the weather, Sage.
+* Sage, how's today's forecast?
 
 See [Modules](modules.md) for information on what kinds of questions you can
 ask.
