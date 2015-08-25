@@ -40,8 +40,8 @@ if (program.configure) {
   // Check if config exists, then start the app
   if (!config.exists()) {
     console.log('Error: You must configure Sage before you can run it.\n' +
-      'Do this by running app.js with the `--configure` flag:\n\n' +
-      '    $ ./app.js --configure\n');
+      'Do this by running sage with the `--configure` flag:\n\n' +
+      '    $ sage --configure\n');
     process.exit(1);
   }
 
@@ -96,8 +96,8 @@ if (program.configure) {
   // Check if config exists, then start the app
   if (!config.exists()) {
     console.log('Error: You must configure Sage before you can run it.\n' +
-      'Do this by running app.js with the `--configure` flag:\n\n' +
-      '    $ ./app.js --configure\n');
+      'Do this by running sage with the `--configure` flag:\n\n' +
+      '    $ sage --configure\n');
     process.exit(0);
   }
 
