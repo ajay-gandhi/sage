@@ -27,7 +27,7 @@ module.exports = (function () {
 
     var wolfram_api = Wolfram.createClient(api_key);
 
-    wolfram_api.query(question, function (err, result) {
+    wolfram_api.query(input, function (err, result) {
       if (err) return console.log('Error with API:', err);
 
       var content;
