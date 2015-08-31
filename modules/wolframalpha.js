@@ -8,7 +8,7 @@
  * This module assumes the hotword is spoken before asking the question
  */
 
-var Wolfram = require('wolfram-alpha');
+var WolframClient = require('node-wolfram');
 
 module.exports = (function () {
 
@@ -25,15 +25,25 @@ module.exports = (function () {
       return;
     }
 
-    var wolfram_api = Wolfram.createClient(api_key);
+    var Wolfram = new WolframClient(api_key);
 
-    wolfram_api.query(input, function (err, result) {
+    Wolfram.query(message, function (err, result) {
       if (err) return console.log('Error with API:', err);
 
+      // No results
+      if (!result.queryresult.pod) {
+        speaker.say('I didn\'t understand your question.', complete);
+        return;
+      }
+
+      // Get primary answer
       var content;
-      for (var i = 0; i < result.length; i++) {
-        if (result[i].primary) {
-          content = result[i].subpods[0].text;
+      for (var p = 0; p < result.queryresult.pod.length; p++) {
+        var pod = result.queryresult.pod[p];
+
+        // Only return primary pod
+        if (pod.$.primary === 'true') {
+          content = pod.subpod[0].plaintext[0];
           break;
         }
       }

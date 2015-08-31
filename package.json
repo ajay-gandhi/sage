@@ -13,9 +13,9 @@
     "fs-extra": "^0.22.1",
     "imap-simple": "^1.5.0",
     "inquirer": "^0.9.0",
+    "node-wolfram": "0.0.1",
     "speakable": "git://github.com/ajay-gandhi/node-speakable",
-    "weather-js": "^1.0.2",
-    "wolfram-alpha": "^0.2.1"
+    "weather-js": "^1.0.2"
   },
   "devDependencies": {},
   "scripts": {
