@@ -27,7 +27,7 @@ module.exports = (function () {
 
     var Wolfram = new WolframClient(api_key);
 
-    Wolfram.query(message, function (err, result) {
+    Wolfram.query(input, function (err, result) {
       if (err) return console.log('Error with API:', err);
 
       // No results
