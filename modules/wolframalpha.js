@@ -48,6 +48,11 @@ module.exports = (function () {
         }
       }
 
+      if (!content) {
+        speaker.say('I didn\'t understand your question.', complete);
+        return;
+      }
+
       if (content.indexOf('1 | ') == 0) {
         // Definitions have multiple (see WolframAlpha API)
         var idx = 1;
