@@ -18,6 +18,6 @@ we'll add your instructions here!
 ## Table of Contents
 
 - [Usage](docs/usage.md)
-- [Modules](docs/module.md)
+- [Modules](docs/modules.md)
 - [Installation](docs/installation.md)
 - [Developing](docs/developing.md)
